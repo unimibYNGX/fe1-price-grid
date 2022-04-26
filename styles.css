@@ -18,7 +18,7 @@
     --n2_left: 0%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1440px) {
     :root {
         --container_width: 650px;
         --container_height: 482px;
@@ -155,7 +155,35 @@ b {
     border-radius: 6px;
     box-shadow: 1px 1px 15px rgb(0,148,143);
     font-weight: 700;
-    text-shadow: 0.5px 0.5px 10px gray;
+    text-shadow: 0.5px 0.5px 20px gray;
+
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .signup{
